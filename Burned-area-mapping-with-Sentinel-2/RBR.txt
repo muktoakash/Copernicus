@@ -1,0 +1,1 @@
+if $5.cloud_water_mask == 0 then (($5.NBR_Jine - $5.NBR_July) / ($5.NBR_Jine + 1.001)) else NaN

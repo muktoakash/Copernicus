@@ -1,0 +1,1 @@
+if ($5.cloud_mask_Jine > 0 or  $5.cloud_mask_July > 0 or (($5.B3_Jine - $5.B8_Jine) / ($5.B3_Jine + $5.B8_Jine)) >= 0.0) then 1 else 0

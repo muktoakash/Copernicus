@@ -1,0 +1,1 @@
+if ($2.scl_cloud_medium_proba + $2.scl_cloud_high_proba + $2.scl_thin_cirrus) < 255 then 0 else 1

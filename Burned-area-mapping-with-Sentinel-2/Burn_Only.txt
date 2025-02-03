@@ -1,0 +1,1 @@
+if $5.RBR > 0.27 then  $5.RBR  else NaN
