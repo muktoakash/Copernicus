@@ -37,7 +37,7 @@ The training sessions of the Copernicus RUS service are available [here](https:/
 ### Risk Monitoring:
 
 - [ ]   HAZA01 – Flood mapping with Sentinel-1
-- [ ]   HAZA02 – Burned area mapping with Sentinel-2
+- [X]   HAZA02 – Burned area mapping with Sentinel-2
 - [ ]   HAZA03 – Land Subsidence with Sentinel-1
 - [ ]   HAZA04 – Active Fire Detection with Sentinel-3 SLSTR
 - [ ]   HAZA05 – Earthquake Deformation using InSAR with Sentinel-1
