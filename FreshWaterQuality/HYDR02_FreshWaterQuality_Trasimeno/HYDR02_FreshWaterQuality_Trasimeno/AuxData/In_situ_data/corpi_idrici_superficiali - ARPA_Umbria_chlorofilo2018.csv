@@ -1,0 +1,9 @@
+OBJECTID,Codice stazione,Anno,Data,Clorofilla a (µg/l),Coordinata X,Coordinata Y,X UTM 32N,Y UTM 32N,Nome corpo idrico sotterraneo (DLgs 152/06),Codice sottobacino,Nome sottobacino
+865,TRS30,2018,21/11/2018,"22,7",265265.2,4782047,753100.918,4782705.346,Bacino Trasimeno e Depositi Citta' della Pieve,139,Lago Trasimeno
+871,TRS35,2018,21/11/2018,"13,6",268858.1,4776391.1,757089.908,4777320.363,Bacino Trasimeno e Depositi Citta' della Pieve,139,Lago Trasimeno
+872,TRS35,2018,04/09/2018,"24,3",268858.1,4776391.1,757089.908,4777320.363,Bacino Trasimeno e Depositi Citta' della Pieve,139,Lago Trasimeno
+866,TRS30,2018,04/09/2018,"39,4",265265.2,4782047,753100.918,4782705.346,Bacino Trasimeno e Depositi Citta' della Pieve,139,Lago Trasimeno
+867,TRS35,2018,09/07/2018,"3,6",268858.1,4776391.1,757089.908,4777320.363,Bacino Trasimeno e Depositi Citta' della Pieve,139,Lago Trasimeno
+863,TRS30,2018,09/07/2018,"6,5",265265.2,4782047,753100.918,4782705.346,Bacino Trasimeno e Depositi Citta' della Pieve,139,Lago Trasimeno
+861,TRS30,2018,16/05/2018,"2,9",265265.2,4782047,753100.918,4782705.346,Bacino Trasimeno e Depositi Citta' della Pieve,139,Lago Trasimeno
+870,TRS35,2018,16/05/2018,"9,4",268858.1,4776391.1,757089.908,4777320.363,Bacino Trasimeno e Depositi Citta' della Pieve,139,Lago Trasimeno

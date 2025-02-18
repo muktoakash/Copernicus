@@ -53,7 +53,7 @@
       <sourceProduct refid="Subset"/>
     </sources>
     <parameters class="com.bc.ceres.binding.dom.XppDomElement">
-      <file>S:\GitHub\Copernicus\FreshWaterQuality\Processing\Subset_S2A_MSIL1C_20180416T100031_N0500_R122_T32TQN_20230905T234641_resampled.dim</file>
+      <file>$Output</file>
       <formatName>BEAM-DIMAP</formatName>
     </parameters>
   </node>
