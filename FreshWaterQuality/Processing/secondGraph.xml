@@ -1,0 +1,91 @@
+<graph id="Graph">
+  <version>1.0</version>
+  <node id="Read">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <useAdvancedOptions>false</useAdvancedOptions>
+      <file>$Input</file>
+      <copyMetadata>true</copyMetadata>
+      <bandNames/>
+      <pixelRegion>0,0,1595,1568</pixelRegion>
+      <maskNames/>
+    </parameters>
+  </node>
+  <node id="BandMaths">
+    <operator>BandMaths</operator>
+    <sources>
+      <sourceProduct refid="Read"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <targetBands>
+        <targetBand>
+          <name>R705_R665</name>
+          <type>float32</type>
+          <expression>if Valid_PE then (rhown_B5 / rhown_B4) else NaN</expression>
+          <description/>
+          <unit/>
+          <noDataValue>NaN</noDataValue>
+        </targetBand>
+      </targetBands>
+      <variables/>
+    </parameters>
+  </node>
+  <node id="BandMaths(2)">
+    <operator>BandMaths</operator>
+    <sources>
+      <sourceProduct refid="Read"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <targetBands>
+        <targetBand>
+          <name>MCl</name>
+          <type>float32</type>
+          <expression>if Valid_PE then (rhown_B5 - rhown_B4 - 0.53 * (rhown_B6 - rhown_B4))  else NaN</expression>
+          <description/>
+          <unit/>
+          <noDataValue>NaN</noDataValue>
+        </targetBand>
+      </targetBands>
+      <variables/>
+    </parameters>
+  </node>
+  <node id="Write(2)">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="BandMaths(2)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>S:\GitHub\Copernicus\FreshWaterQuality\Processing\Output\Second\$Output2</file>
+      <formatName>GeoTIFF</formatName>
+    </parameters>
+  </node>
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="BandMaths"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>S:\GitHub\Copernicus\FreshWaterQuality\Processing\Output\Second\$Output1</file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+  <applicationData id="Presentation">
+    <Description/>
+    <node id="Read">
+            <displayPosition x="37.0" y="135.0"/>
+    </node>
+    <node id="BandMaths">
+      <displayPosition x="181.0" y="82.0"/>
+    </node>
+    <node id="BandMaths(2)">
+      <displayPosition x="185.0" y="199.0"/>
+    </node>
+    <node id="Write(2)">
+      <displayPosition x="352.0" y="196.0"/>
+    </node>
+    <node id="Write">
+            <displayPosition x="345.0" y="77.0"/>
+    </node>
+  </applicationData>
+</graph>
