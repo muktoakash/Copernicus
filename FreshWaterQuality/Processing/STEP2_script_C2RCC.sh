@@ -1,6 +1,6 @@
 #!/bin/bash
 
-output_folder=./script_out
+output_folder=./script_out/
 metData=../HYDR02_FreshWaterQuality_Trasimeno/HYDR02_FreshWaterQuality_Trasimeno/AuxData/Met_aux.csv
 paramFile=./c2rcc_param.xml
 oldEnd=.dim
