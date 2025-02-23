@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Dimap_Document name="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.dim">
+    <Metadata_Id>
+        <METADATA_FORMAT version="2.13.0">DIMAP</METADATA_FORMAT>
+        <METADATA_PROFILE>BEAM-DATAMODEL-V1</METADATA_PROFILE>
+    </Metadata_Id>
+    <Dataset_Id>
+        <DATASET_SERIES>BEAM-PRODUCT</DATASET_SERIES>
+        <DATASET_NAME>script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC</DATASET_NAME>
+    </Dataset_Id>
+    <Dataset_Use>
+        <DATASET_AUTO_GROUPING>iop:conc:rhown:kd:unc</DATASET_AUTO_GROUPING>
+    </Dataset_Use>
+    <Production>
+        <DATASET_PRODUCER_NAME />
+        <PRODUCT_TYPE>C2RCC_S2-MSI</PRODUCT_TYPE>
+        <PRODUCT_SCENE_RASTER_START_TIME>15-NOV-2018 10:12:51.024000</PRODUCT_SCENE_RASTER_START_TIME>
+        <PRODUCT_SCENE_RASTER_STOP_TIME>15-NOV-2018 10:12:51.024000</PRODUCT_SCENE_RASTER_STOP_TIME>
+    </Production>
+    <Coordinate_Reference_System>
+        <WKT>
+             PROJCS["WGS 84 / UTM zone 32N", 
+               GEOGCS["WGS 84", 
+                 DATUM["World Geodetic System 1984", 
+                   SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+                   AUTHORITY["EPSG","6326"]], 
+                 PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+                 UNIT["degree", 0.017453292519943295], 
+                 AXIS["Geodetic longitude", EAST], 
+                 AXIS["Geodetic latitude", NORTH], 
+                 AUTHORITY["EPSG","4326"]], 
+               PROJECTION["Transverse_Mercator"], 
+               PARAMETER["central_meridian", 9.0], 
+               PARAMETER["latitude_of_origin", 0.0], 
+               PARAMETER["scale_factor", 0.9996], 
+               PARAMETER["false_easting", 500000.0], 
+               PARAMETER["false_northing", 0.0], 
+               UNIT["m", 1.0], 
+               AXIS["Easting", EAST], 
+               AXIS["Northing", NORTH], 
+               AUTHORITY["EPSG","32632"]]
+        </WKT>
+    </Coordinate_Reference_System>
+    <Geoposition>
+        <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+    </Geoposition>
+    <Flag_Coding name="c2rcc_flags">
+        <Flag>
+            <Flag_Name>Rtosa_OOS</Flag_Name>
+            <Flag_Index>1</Flag_Index>
+            <Flag_description>The input spectrum to the atmospheric correction neural net was out of the scope of the training range and the inversion is likely to be wrong</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Rtosa_OOR</Flag_Name>
+            <Flag_Index>2</Flag_Index>
+            <Flag_description>The input spectrum to the atmospheric correction neural net out of training range</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Rhow_OOR</Flag_Name>
+            <Flag_Index>4</Flag_Index>
+            <Flag_description>One of the inputs to the IOP retrieval neural net is out of training range</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Cloud_risk</Flag_Name>
+            <Flag_Index>8</Flag_Index>
+            <Flag_description>High downwelling transmission is indicating cloudy conditions</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Iop_OOR</Flag_Name>
+            <Flag_Index>16</Flag_Index>
+            <Flag_description>One of the IOPs is out of range</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Apig_at_max</Flag_Name>
+            <Flag_Index>32</Flag_Index>
+            <Flag_description>Apig output of the IOP retrieval neural net is at its maximum. This means that the true value is this value or higher.</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Adet_at_max</Flag_Name>
+            <Flag_Index>64</Flag_Index>
+            <Flag_description>Adet output of the IOP retrieval neural net is at its maximum. This means that the true value is this value or higher.</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Agelb_at_max</Flag_Name>
+            <Flag_Index>128</Flag_Index>
+            <Flag_description>Agelb output of the IOP retrieval neural net is at its maximum. This means that the true value is this value or higher.</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Bpart_at_max</Flag_Name>
+            <Flag_Index>256</Flag_Index>
+            <Flag_description>Bpart output of the IOP retrieval neural net is at its maximum. This means that the true value is this value or higher.</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Bwit_at_max</Flag_Name>
+            <Flag_Index>512</Flag_Index>
+            <Flag_description>Bwit output of the IOP retrieval neural net is at its maximum. This means that the true value is this value or higher.</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Apig_at_min</Flag_Name>
+            <Flag_Index>1024</Flag_Index>
+            <Flag_description>Apig output of the IOP retrieval neural net is at its minimum. This means that the true value is this value or lower.</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Adet_at_min</Flag_Name>
+            <Flag_Index>2048</Flag_Index>
+            <Flag_description>Adet output of the IOP retrieval neural net is at its minimum. This means that the true value is this value or lower.</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Agelb_at_min</Flag_Name>
+            <Flag_Index>4096</Flag_Index>
+            <Flag_description>Agelb output of the IOP retrieval neural net is at its minimum. This means that the true value is this value or lower.</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Bpart_at_min</Flag_Name>
+            <Flag_Index>8192</Flag_Index>
+            <Flag_description>Bpart output of the IOP retrieval neural net is at its minimum. This means that the true value is this value or lower.</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Bwit_at_min</Flag_Name>
+            <Flag_Index>16384</Flag_Index>
+            <Flag_description>Bwit output of the IOP retrieval neural net is at its minimum. This means that the true value is this value or lower.</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Rhow_OOS</Flag_Name>
+            <Flag_Index>32768</Flag_Index>
+            <Flag_description>The Rhow input spectrum to IOP neural net is probably not within the training range of the neural net, and the inversion is likely to be wrong.</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Kd489_OOR</Flag_Name>
+            <Flag_Index>65536</Flag_Index>
+            <Flag_description>Kd489 is out of range</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Kdmin_OOR</Flag_Name>
+            <Flag_Index>131072</Flag_Index>
+            <Flag_description>Kdmin is out of range</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Kd489_at_max</Flag_Name>
+            <Flag_Index>262144</Flag_Index>
+            <Flag_description>Kdmin is at max</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Kdmin_at_max</Flag_Name>
+            <Flag_Index>524288</Flag_Index>
+            <Flag_description>Kdmin is at max</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>Valid_PE</Flag_Name>
+            <Flag_Index>-2147483648</Flag_Index>
+            <Flag_description>The operators valid pixel expression has resolved to true</Flag_description>
+        </Flag>
+    </Flag_Coding>
+    <Raster_Dimensions>
+        <NCOLS>1595</NCOLS>
+        <NROWS>1568</NROWS>
+        <NBANDS>33</NBANDS>
+    </Raster_Dimensions>
+    <Data_Access>
+        <DATA_FILE_FORMAT>ENVI</DATA_FILE_FORMAT>
+        <DATA_FILE_FORMAT_DESC>ENVI File Format</DATA_FILE_FORMAT_DESC>
+        <DATA_FILE_ORGANISATION>BAND_SEPARATE</DATA_FILE_ORGANISATION>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/rhown_B1.hdr" />
+            <BAND_INDEX>0</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/rhown_B2.hdr" />
+            <BAND_INDEX>1</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/rhown_B3.hdr" />
+            <BAND_INDEX>2</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/rhown_B4.hdr" />
+            <BAND_INDEX>3</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/rhown_B5.hdr" />
+            <BAND_INDEX>4</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/rhown_B6.hdr" />
+            <BAND_INDEX>5</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/iop_apig.hdr" />
+            <BAND_INDEX>6</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/iop_adet.hdr" />
+            <BAND_INDEX>7</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/iop_agelb.hdr" />
+            <BAND_INDEX>8</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/iop_bpart.hdr" />
+            <BAND_INDEX>9</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/iop_bwit.hdr" />
+            <BAND_INDEX>10</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/kd489.hdr" />
+            <BAND_INDEX>14</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/kdmin.hdr" />
+            <BAND_INDEX>15</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/unc_apig.hdr" />
+            <BAND_INDEX>19</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/unc_adet.hdr" />
+            <BAND_INDEX>20</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/unc_agelb.hdr" />
+            <BAND_INDEX>21</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/unc_bpart.hdr" />
+            <BAND_INDEX>22</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/unc_bwit.hdr" />
+            <BAND_INDEX>23</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/unc_adg.hdr" />
+            <BAND_INDEX>24</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/unc_atot.hdr" />
+            <BAND_INDEX>25</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/unc_btot.hdr" />
+            <BAND_INDEX>26</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/unc_kd489.hdr" />
+            <BAND_INDEX>29</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/unc_kdmin.hdr" />
+            <BAND_INDEX>30</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/c2rcc_flags.hdr" />
+            <BAND_INDEX>32</BAND_INDEX>
+        </Data_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/tie_point_grids/tcwv.hdr" />
+            <TIE_POINT_GRID_INDEX>0</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/tie_point_grids/tco3.hdr" />
+            <TIE_POINT_GRID_INDEX>1</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/tie_point_grids/msl.hdr" />
+            <TIE_POINT_GRID_INDEX>2</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/tie_point_grids/r.hdr" />
+            <TIE_POINT_GRID_INDEX>3</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/tie_point_grids/10u.hdr" />
+            <TIE_POINT_GRID_INDEX>4</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/tie_point_grids/10v.hdr" />
+            <TIE_POINT_GRID_INDEX>5</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/tie_point_grids/aux_latitude.hdr" />
+            <TIE_POINT_GRID_INDEX>6</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.data/tie_point_grids/aux_longitude.hdr" />
+            <TIE_POINT_GRID_INDEX>7</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+    </Data_Access>
+    <Tie_Point_Grids>
+        <NUM_TIE_POINT_GRIDS>8</NUM_TIE_POINT_GRIDS>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>0</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Total column water vapour at surface level provided by ECMWF</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>kg m**-2</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>tcwv</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>4</NROWS>
+            <OFFSET_X>-792.5</OFFSET_X>
+            <OFFSET_Y>-1148.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>1</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Total column ozone at surface level provided by ECMWF</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>kg m**-2</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>tco3</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>4</NROWS>
+            <OFFSET_X>-792.5</OFFSET_X>
+            <OFFSET_Y>-1148.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>2</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Mean sea level pressure at surface level provided by ECMWF</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>Pa</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>msl</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>4</NROWS>
+            <OFFSET_X>-792.5</OFFSET_X>
+            <OFFSET_Y>-1148.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>3</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Relative humidity at surface level provided by ECMWF</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>%</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>r</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>4</NROWS>
+            <OFFSET_X>-792.5</OFFSET_X>
+            <OFFSET_Y>-1148.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>4</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>10 metre U wind component at surface level provided by ECMWF</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>m s**-1</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>10u</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>4</NROWS>
+            <OFFSET_X>-792.5</OFFSET_X>
+            <OFFSET_Y>-1148.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>5</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>10 metre V wind component at surface level provided by ECMWF</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>m s**-1</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>10v</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>4</NROWS>
+            <OFFSET_X>-792.5</OFFSET_X>
+            <OFFSET_Y>-1148.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>6</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION />
+            <PHYSICAL_UNIT>degrees_north</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>aux_latitude</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>4</NROWS>
+            <OFFSET_X>-792.5</OFFSET_X>
+            <OFFSET_Y>-1148.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>7</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION />
+            <PHYSICAL_UNIT>degrees_east</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>aux_longitude</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>4</NROWS>
+            <OFFSET_X>-792.5</OFFSET_X>
+            <OFFSET_Y>-1148.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+    </Tie_Point_Grids>
+    <Masks>
+        <Mask type="Maths"><NAME value="Rtosa_OOS" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="The input spectrum to the atmospheric correction neural net was out of the scope of the training range and the inversion is likely to be wrong" /><COLOR red="255" green="0" blue="0" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Rtosa_OOS" /></Mask>
+        <Mask type="Maths"><NAME value="Rtosa_OOR" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="The input spectrum to the atmospheric correction neural net out of training range" /><COLOR red="255" green="200" blue="0" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Rtosa_OOR" /></Mask>
+        <Mask type="Maths"><NAME value="Rhow_OOR" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="One of the inputs to the IOP retrieval neural net is out of training range" /><COLOR red="255" green="255" blue="0" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Rhow_OOR" /></Mask>
+        <Mask type="Maths"><NAME value="Cloud_risk" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="High downwelling transmission is indicating cloudy conditions" /><COLOR red="192" green="192" blue="192" alpha="255" /><TRANSPARENCY value="0.0" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Cloud_risk" /></Mask>
+        <Mask type="Maths"><NAME value="Iop_OOR" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="One of the IOPs is out of range" /><COLOR red="0" green="255" blue="0" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Iop_OOR" /></Mask>
+        <Mask type="Maths"><NAME value="Apig_at_max" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="Apig output of the IOP retrieval neural net is at its maximum. This means that the true value is this value or higher." /><COLOR red="255" green="175" blue="175" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Apig_at_max" /></Mask>
+        <Mask type="Maths"><NAME value="Adet_at_max" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="Adet output of the IOP retrieval neural net is at its maximum. This means that the true value is this value or higher." /><COLOR red="255" green="0" blue="255" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Adet_at_max" /></Mask>
+        <Mask type="Maths"><NAME value="Agelb_at_max" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="Agelb output of the IOP retrieval neural net is at its maximum. This means that the true value is this value or higher." /><COLOR red="0" green="255" blue="255" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Agelb_at_max" /></Mask>
+        <Mask type="Maths"><NAME value="Bpart_at_max" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="Bpart output of the IOP retrieval neural net is at its maximum. This means that the true value is this value or higher." /><COLOR red="128" green="128" blue="128" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Bpart_at_max" /></Mask>
+        <Mask type="Maths"><NAME value="Bwit_at_max" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="Bwit output of the IOP retrieval neural net is at its maximum. This means that the true value is this value or higher." /><COLOR red="255" green="0" blue="0" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Bwit_at_max" /></Mask>
+        <Mask type="Maths"><NAME value="Apig_at_min" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="Apig output of the IOP retrieval neural net is at its minimum. This means that the true value is this value or lower." /><COLOR red="255" green="200" blue="0" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Apig_at_min" /></Mask>
+        <Mask type="Maths"><NAME value="Adet_at_min" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="Adet output of the IOP retrieval neural net is at its minimum. This means that the true value is this value or lower." /><COLOR red="255" green="255" blue="0" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Adet_at_min" /></Mask>
+        <Mask type="Maths"><NAME value="Agelb_at_min" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="Agelb output of the IOP retrieval neural net is at its minimum. This means that the true value is this value or lower." /><COLOR red="0" green="0" blue="255" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Agelb_at_min" /></Mask>
+        <Mask type="Maths"><NAME value="Bpart_at_min" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="Bpart output of the IOP retrieval neural net is at its minimum. This means that the true value is this value or lower." /><COLOR red="0" green="255" blue="0" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Bpart_at_min" /></Mask>
+        <Mask type="Maths"><NAME value="Bwit_at_min" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="Bwit output of the IOP retrieval neural net is at its minimum. This means that the true value is this value or lower." /><COLOR red="255" green="175" blue="175" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Bwit_at_min" /></Mask>
+        <Mask type="Maths"><NAME value="Rhow_OOS" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="The Rhow input spectrum to IOP neural net is probably not within the training range of the neural net, and the inversion is likely to be wrong." /><COLOR red="255" green="0" blue="255" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Rhow_OOS" /></Mask>
+        <Mask type="Maths"><NAME value="Kd489_OOR" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="Kd489 is out of range" /><COLOR red="0" green="255" blue="255" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Kd489_OOR" /></Mask>
+        <Mask type="Maths"><NAME value="Kdmin_OOR" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="Kdmin is out of range" /><COLOR red="128" green="128" blue="128" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Kdmin_OOR" /></Mask>
+        <Mask type="Maths"><NAME value="Kd489_at_max" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="Kdmin is at max" /><COLOR red="255" green="0" blue="0" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Kd489_at_max" /></Mask>
+        <Mask type="Maths"><NAME value="Kdmin_at_max" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="Kdmin is at max" /><COLOR red="255" green="200" blue="0" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Kdmin_at_max" /></Mask>
+        <Mask type="Maths"><NAME value="Valid_PE" /><MASK_RASTER_WIDTH value="1595" /><MASK_RASTER_HEIGHT value="1568" /><DESCRIPTION value="The operators valid pixel expression has resolved to true" /><COLOR red="255" green="255" blue="0" alpha="255" /><TRANSPARENCY value="0.5" /><IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,744490.0,4788510.0" /><EXPRESSION value="c2rcc_flags.Valid_PE" /></Mask>
+    </Masks>
+    <Image_Interpretation>
+        <Spectral_Band_Info>
+            <BAND_INDEX>0</BAND_INDEX>
+            <BAND_DESCRIPTION>Normalized water leaving reflectances</BAND_DESCRIPTION>
+            <BAND_NAME>rhown_B1</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <SPECTRAL_BAND_INDEX>0</SPECTRAL_BAND_INDEX>
+            <BAND_WAVELEN>443.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>20.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>1</BAND_INDEX>
+            <BAND_DESCRIPTION>Normalized water leaving reflectances</BAND_DESCRIPTION>
+            <BAND_NAME>rhown_B2</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <SPECTRAL_BAND_INDEX>1</SPECTRAL_BAND_INDEX>
+            <BAND_WAVELEN>490.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>65.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>2</BAND_INDEX>
+            <BAND_DESCRIPTION>Normalized water leaving reflectances</BAND_DESCRIPTION>
+            <BAND_NAME>rhown_B3</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <SPECTRAL_BAND_INDEX>2</SPECTRAL_BAND_INDEX>
+            <BAND_WAVELEN>560.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>35.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>3</BAND_INDEX>
+            <BAND_DESCRIPTION>Normalized water leaving reflectances</BAND_DESCRIPTION>
+            <BAND_NAME>rhown_B4</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <SPECTRAL_BAND_INDEX>3</SPECTRAL_BAND_INDEX>
+            <BAND_WAVELEN>665.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>30.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>4</BAND_INDEX>
+            <BAND_DESCRIPTION>Normalized water leaving reflectances</BAND_DESCRIPTION>
+            <BAND_NAME>rhown_B5</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <SPECTRAL_BAND_INDEX>4</SPECTRAL_BAND_INDEX>
+            <BAND_WAVELEN>705.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>15.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>5</BAND_INDEX>
+            <BAND_DESCRIPTION>Normalized water leaving reflectances</BAND_DESCRIPTION>
+            <BAND_NAME>rhown_B6</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <SPECTRAL_BAND_INDEX>5</SPECTRAL_BAND_INDEX>
+            <BAND_WAVELEN>740.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>15.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>6</BAND_INDEX>
+            <BAND_DESCRIPTION>Absorption coefficient of phytoplankton pigments at 443 nm</BAND_DESCRIPTION>
+            <BAND_NAME>iop_apig</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_VARIABLE>unc_apig</ANCILLARY_VARIABLE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>7</BAND_INDEX>
+            <BAND_DESCRIPTION>Absorption coefficient of detritus at 443 nm</BAND_DESCRIPTION>
+            <BAND_NAME>iop_adet</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_VARIABLE>unc_adet</ANCILLARY_VARIABLE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>8</BAND_INDEX>
+            <BAND_DESCRIPTION>Absorption coefficient of gelbstoff at 443 nm</BAND_DESCRIPTION>
+            <BAND_NAME>iop_agelb</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_VARIABLE>unc_agelb</ANCILLARY_VARIABLE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>9</BAND_INDEX>
+            <BAND_DESCRIPTION>Scattering coefficient of marine paticles at 443 nm</BAND_DESCRIPTION>
+            <BAND_NAME>iop_bpart</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_VARIABLE>unc_bpart</ANCILLARY_VARIABLE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>10</BAND_INDEX>
+            <BAND_DESCRIPTION>Scattering coefficient of white particles at 443 nm</BAND_DESCRIPTION>
+            <BAND_NAME>iop_bwit</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_VARIABLE>unc_bwit</ANCILLARY_VARIABLE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>11</BAND_INDEX>
+            <BAND_DESCRIPTION>Detritus + gelbstoff absorption at 443 nm</BAND_DESCRIPTION>
+            <BAND_NAME>iop_adg</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VIRTUAL_BAND>true</VIRTUAL_BAND>
+            <EXPRESSION>iop_adet + iop_agelb</EXPRESSION>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_VARIABLE>unc_adg</ANCILLARY_VARIABLE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>12</BAND_INDEX>
+            <BAND_DESCRIPTION>phytoplankton + detritus + gelbstoff absorption at 443 nm</BAND_DESCRIPTION>
+            <BAND_NAME>iop_atot</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VIRTUAL_BAND>true</VIRTUAL_BAND>
+            <EXPRESSION>iop_apig + iop_adet + iop_agelb</EXPRESSION>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_VARIABLE>unc_atot</ANCILLARY_VARIABLE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>13</BAND_INDEX>
+            <BAND_DESCRIPTION>total particle scattering at 443 nm</BAND_DESCRIPTION>
+            <BAND_NAME>iop_btot</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VIRTUAL_BAND>true</VIRTUAL_BAND>
+            <EXPRESSION>iop_bpart + iop_bwit</EXPRESSION>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_VARIABLE>unc_btot</ANCILLARY_VARIABLE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>14</BAND_INDEX>
+            <BAND_DESCRIPTION>Irradiance attenuation coefficient at 489 nm</BAND_DESCRIPTION>
+            <BAND_NAME>kd489</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_VARIABLE>unc_kd489</ANCILLARY_VARIABLE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>15</BAND_INDEX>
+            <BAND_DESCRIPTION>Mean irradiance attenuation coefficient at the three bands with minimum kd</BAND_DESCRIPTION>
+            <BAND_NAME>kdmin</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_VARIABLE>unc_kdmin</ANCILLARY_VARIABLE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>16</BAND_INDEX>
+            <BAND_DESCRIPTION>Depth of the water column from which 90% of the water leaving irradiance comes from</BAND_DESCRIPTION>
+            <BAND_NAME>kd_z90max</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VIRTUAL_BAND>true</VIRTUAL_BAND>
+            <EXPRESSION>1 / kdmin</EXPRESSION>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_VARIABLE>unc_kd_z90max</ANCILLARY_VARIABLE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>17</BAND_INDEX>
+            <BAND_DESCRIPTION>Total suspended matter dry weight concentration</BAND_DESCRIPTION>
+            <BAND_NAME>conc_tsm</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>g m^-3</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VIRTUAL_BAND>true</VIRTUAL_BAND>
+            <EXPRESSION>1.06 * pow(iop_btot, 0.942)</EXPRESSION>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_VARIABLE>unc_tsm</ANCILLARY_VARIABLE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>18</BAND_INDEX>
+            <BAND_DESCRIPTION>Chlorophyll concentration</BAND_DESCRIPTION>
+            <BAND_NAME>conc_chl</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>mg m^-3</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VIRTUAL_BAND>true</VIRTUAL_BAND>
+            <EXPRESSION>pow(iop_apig, 1.04) * 21.0</EXPRESSION>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_VARIABLE>unc_chl</ANCILLARY_VARIABLE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>19</BAND_INDEX>
+            <BAND_DESCRIPTION>Uncertainty of pigment absorption coefficient</BAND_DESCRIPTION>
+            <BAND_NAME>unc_apig</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_RELATION>uncertainty</ANCILLARY_RELATION>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>20</BAND_INDEX>
+            <BAND_DESCRIPTION>Uncertainty of detritus absorption coefficient</BAND_DESCRIPTION>
+            <BAND_NAME>unc_adet</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_RELATION>uncertainty</ANCILLARY_RELATION>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>21</BAND_INDEX>
+            <BAND_DESCRIPTION>Uncertainty of dissolved gelbstoff absorption coefficient</BAND_DESCRIPTION>
+            <BAND_NAME>unc_agelb</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_RELATION>uncertainty</ANCILLARY_RELATION>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>22</BAND_INDEX>
+            <BAND_DESCRIPTION>Uncertainty of particle scattering coefficient</BAND_DESCRIPTION>
+            <BAND_NAME>unc_bpart</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_RELATION>uncertainty</ANCILLARY_RELATION>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>23</BAND_INDEX>
+            <BAND_DESCRIPTION>Uncertainty of white particle scattering coefficient</BAND_DESCRIPTION>
+            <BAND_NAME>unc_bwit</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_RELATION>uncertainty</ANCILLARY_RELATION>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>24</BAND_INDEX>
+            <BAND_DESCRIPTION>Uncertainty of total gelbstoff absorption coefficient</BAND_DESCRIPTION>
+            <BAND_NAME>unc_adg</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_RELATION>uncertainty</ANCILLARY_RELATION>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>25</BAND_INDEX>
+            <BAND_DESCRIPTION>Uncertainty of total water constituent absorption coefficient</BAND_DESCRIPTION>
+            <BAND_NAME>unc_atot</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_RELATION>uncertainty</ANCILLARY_RELATION>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>26</BAND_INDEX>
+            <BAND_DESCRIPTION>Uncertainty of total water constituent scattering coefficient</BAND_DESCRIPTION>
+            <BAND_NAME>unc_btot</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_RELATION>uncertainty</ANCILLARY_RELATION>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>27</BAND_INDEX>
+            <BAND_DESCRIPTION>Uncertainty of total suspended matter (TSM) dry weight concentration</BAND_DESCRIPTION>
+            <BAND_NAME>unc_tsm</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>g m^-3</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VIRTUAL_BAND>true</VIRTUAL_BAND>
+            <EXPRESSION>unc_btot * 1.06</EXPRESSION>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_RELATION>uncertainty</ANCILLARY_RELATION>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>28</BAND_INDEX>
+            <BAND_DESCRIPTION>Uncertainty of chlorophyll concentration</BAND_DESCRIPTION>
+            <BAND_NAME>unc_chl</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>mg m^-3</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VIRTUAL_BAND>true</VIRTUAL_BAND>
+            <EXPRESSION>pow(unc_apig, 1.04) * 21.0</EXPRESSION>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_RELATION>uncertainty</ANCILLARY_RELATION>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>29</BAND_INDEX>
+            <BAND_DESCRIPTION>Uncertainty of irradiance attenuation coefficient</BAND_DESCRIPTION>
+            <BAND_NAME>unc_kd489</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_RELATION>uncertainty</ANCILLARY_RELATION>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>30</BAND_INDEX>
+            <BAND_DESCRIPTION>Uncertainty of mean irradiance attenuation coefficient</BAND_DESCRIPTION>
+            <BAND_NAME>unc_kdmin</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m^-1</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_RELATION>uncertainty</ANCILLARY_RELATION>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>31</BAND_INDEX>
+            <BAND_DESCRIPTION>Uncertainty of depth of the water column from which 90% of the water leaving irradiance comes from</BAND_DESCRIPTION>
+            <BAND_NAME>unc_kd_z90max</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <PHYSICAL_UNIT>m</PHYSICAL_UNIT>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>true</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>NaN</NO_DATA_VALUE>
+            <VIRTUAL_BAND>true</VIRTUAL_BAND>
+            <EXPRESSION>abs(kd_z90max - 1.0 / abs(kdmin - unc_kdmin))</EXPRESSION>
+            <VALID_MASK_TERM>c2rcc_flags.Valid_PE</VALID_MASK_TERM>
+            <ANCILLARY_RELATION>uncertainty</ANCILLARY_RELATION>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>32</BAND_INDEX>
+            <BAND_DESCRIPTION>C2RCC quality flags</BAND_DESCRIPTION>
+            <BAND_NAME>c2rcc_flags</BAND_NAME>
+            <BAND_RASTER_WIDTH>1595</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>1568</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>uint32</DATA_TYPE>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BAND_ANGULAR_VALUE>-999.0</BAND_ANGULAR_VALUE>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <FLAG_CODING_NAME>c2rcc_flags</FLAG_CODING_NAME>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>false</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>0.0</NO_DATA_VALUE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,744490.0,4788510.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+    </Image_Interpretation>
+    <Dataset_Sources>
+        <MDElem name="metadata">
+            <MDElem name="history">
+                <MDElem name="SubsetInfo">
+                    <MDATTR name="SourceProduct.name" type="ascii">S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled</MDATTR>
+                    <MDATTR name="SubSampling.x" type="int32" mode="rw">1</MDATTR>
+                    <MDATTR name="SubSampling.y" type="int32" mode="rw">1</MDATTR>
+                    <MDATTR name="SubRegion.x" type="int32" mode="rw">4453</MDATTR>
+                    <MDATTR name="SubRegion.y" type="int32" mode="rw">1149</MDATTR>
+                    <MDATTR name="SubRegion.width" type="int32" mode="rw">1595</MDATTR>
+                    <MDATTR name="SubRegion.height" type="int32" mode="rw">1568</MDATTR>
+                    <MDATTR name="ProductNodeName.1" type="ascii">tcwv</MDATTR>
+                    <MDATTR name="ProductNodeName.2" type="ascii">tco3</MDATTR>
+                    <MDATTR name="ProductNodeName.3" type="ascii">msl</MDATTR>
+                    <MDATTR name="ProductNodeName.4" type="ascii">r</MDATTR>
+                    <MDATTR name="ProductNodeName.5" type="ascii">10u</MDATTR>
+                    <MDATTR name="ProductNodeName.6" type="ascii">10v</MDATTR>
+                    <MDATTR name="ProductNodeName.7" type="ascii">aux_latitude</MDATTR>
+                    <MDATTR name="ProductNodeName.8" type="ascii">aux_longitude</MDATTR>
+                    <MDATTR name="ProductNodeName.9" type="ascii">B1</MDATTR>
+                    <MDATTR name="ProductNodeName.10" type="ascii">B2</MDATTR>
+                    <MDATTR name="ProductNodeName.11" type="ascii">B3</MDATTR>
+                    <MDATTR name="ProductNodeName.12" type="ascii">B4</MDATTR>
+                    <MDATTR name="ProductNodeName.13" type="ascii">B5</MDATTR>
+                    <MDATTR name="ProductNodeName.14" type="ascii">B6</MDATTR>
+                    <MDATTR name="ProductNodeName.15" type="ascii">B7</MDATTR>
+                    <MDATTR name="ProductNodeName.16" type="ascii">B8</MDATTR>
+                    <MDATTR name="ProductNodeName.17" type="ascii">B8A</MDATTR>
+                    <MDATTR name="ProductNodeName.18" type="ascii">B9</MDATTR>
+                    <MDATTR name="ProductNodeName.19" type="ascii">B10</MDATTR>
+                    <MDATTR name="ProductNodeName.20" type="ascii">B11</MDATTR>
+                    <MDATTR name="ProductNodeName.21" type="ascii">B12</MDATTR>
+                    <MDATTR name="ProductNodeName.22" type="ascii">B_detector_footprint_B1</MDATTR>
+                    <MDATTR name="ProductNodeName.23" type="ascii">B_detector_footprint_B2</MDATTR>
+                    <MDATTR name="ProductNodeName.24" type="ascii">B_detector_footprint_B3</MDATTR>
+                    <MDATTR name="ProductNodeName.25" type="ascii">B_detector_footprint_B4</MDATTR>
+                    <MDATTR name="ProductNodeName.26" type="ascii">B_detector_footprint_B5</MDATTR>
+                    <MDATTR name="ProductNodeName.27" type="ascii">B_detector_footprint_B6</MDATTR>
+                    <MDATTR name="ProductNodeName.28" type="ascii">B_detector_footprint_B7</MDATTR>
+                    <MDATTR name="ProductNodeName.29" type="ascii">B_detector_footprint_B8</MDATTR>
+                    <MDATTR name="ProductNodeName.30" type="ascii">B_detector_footprint_B8A</MDATTR>
+                    <MDATTR name="ProductNodeName.31" type="ascii">B_detector_footprint_B9</MDATTR>
+                    <MDATTR name="ProductNodeName.32" type="ascii">B_detector_footprint_B10</MDATTR>
+                    <MDATTR name="ProductNodeName.33" type="ascii">B_detector_footprint_B11</MDATTR>
+                    <MDATTR name="ProductNodeName.34" type="ascii">B_detector_footprint_B12</MDATTR>
+                    <MDATTR name="ProductNodeName.35" type="ascii">B_ancillary_lost_B1</MDATTR>
+                    <MDATTR name="ProductNodeName.36" type="ascii">B_ancillary_degraded_B1</MDATTR>
+                    <MDATTR name="ProductNodeName.37" type="ascii">B_msi_lost_B1</MDATTR>
+                    <MDATTR name="ProductNodeName.38" type="ascii">B_msi_degraded_B1</MDATTR>
+                    <MDATTR name="ProductNodeName.39" type="ascii">B_defective_B1</MDATTR>
+                    <MDATTR name="ProductNodeName.40" type="ascii">B_nodata_B1</MDATTR>
+                    <MDATTR name="ProductNodeName.41" type="ascii">B_partially_corrected_crosstalk_B1</MDATTR>
+                    <MDATTR name="ProductNodeName.42" type="ascii">B_saturated_l1a_B1</MDATTR>
+                    <MDATTR name="ProductNodeName.43" type="ascii">B_ancillary_lost_B2</MDATTR>
+                    <MDATTR name="ProductNodeName.44" type="ascii">B_ancillary_degraded_B2</MDATTR>
+                    <MDATTR name="ProductNodeName.45" type="ascii">B_msi_lost_B2</MDATTR>
+                    <MDATTR name="ProductNodeName.46" type="ascii">B_msi_degraded_B2</MDATTR>
+                    <MDATTR name="ProductNodeName.47" type="ascii">B_defective_B2</MDATTR>
+                    <MDATTR name="ProductNodeName.48" type="ascii">B_nodata_B2</MDATTR>
+                    <MDATTR name="ProductNodeName.49" type="ascii">B_partially_corrected_crosstalk_B2</MDATTR>
+                    <MDATTR name="ProductNodeName.50" type="ascii">B_saturated_l1a_B2</MDATTR>
+                    <MDATTR name="ProductNodeName.51" type="ascii">B_ancillary_lost_B3</MDATTR>
+                    <MDATTR name="ProductNodeName.52" type="ascii">B_ancillary_degraded_B3</MDATTR>
+                    <MDATTR name="ProductNodeName.53" type="ascii">B_msi_lost_B3</MDATTR>
+                    <MDATTR name="ProductNodeName.54" type="ascii">B_msi_degraded_B3</MDATTR>
+                    <MDATTR name="ProductNodeName.55" type="ascii">B_defective_B3</MDATTR>
+                    <MDATTR name="ProductNodeName.56" type="ascii">B_nodata_B3</MDATTR>
+                    <MDATTR name="ProductNodeName.57" type="ascii">B_partially_corrected_crosstalk_B3</MDATTR>
+                    <MDATTR name="ProductNodeName.58" type="ascii">B_saturated_l1a_B3</MDATTR>
+                    <MDATTR name="ProductNodeName.59" type="ascii">B_ancillary_lost_B4</MDATTR>
+                    <MDATTR name="ProductNodeName.60" type="ascii">B_ancillary_degraded_B4</MDATTR>
+                    <MDATTR name="ProductNodeName.61" type="ascii">B_msi_lost_B4</MDATTR>
+                    <MDATTR name="ProductNodeName.62" type="ascii">B_msi_degraded_B4</MDATTR>
+                    <MDATTR name="ProductNodeName.63" type="ascii">B_defective_B4</MDATTR>
+                    <MDATTR name="ProductNodeName.64" type="ascii">B_nodata_B4</MDATTR>
+                    <MDATTR name="ProductNodeName.65" type="ascii">B_partially_corrected_crosstalk_B4</MDATTR>
+                    <MDATTR name="ProductNodeName.66" type="ascii">B_saturated_l1a_B4</MDATTR>
+                    <MDATTR name="ProductNodeName.67" type="ascii">B_ancillary_lost_B5</MDATTR>
+                    <MDATTR name="ProductNodeName.68" type="ascii">B_ancillary_degraded_B5</MDATTR>
+                    <MDATTR name="ProductNodeName.69" type="ascii">B_msi_lost_B5</MDATTR>
+                    <MDATTR name="ProductNodeName.70" type="ascii">B_msi_degraded_B5</MDATTR>
+                    <MDATTR name="ProductNodeName.71" type="ascii">B_defective_B5</MDATTR>
+                    <MDATTR name="ProductNodeName.72" type="ascii">B_nodata_B5</MDATTR>
+                    <MDATTR name="ProductNodeName.73" type="ascii">B_partially_corrected_crosstalk_B5</MDATTR>
+                    <MDATTR name="ProductNodeName.74" type="ascii">B_saturated_l1a_B5</MDATTR>
+                    <MDATTR name="ProductNodeName.75" type="ascii">B_ancillary_lost_B6</MDATTR>
+                    <MDATTR name="ProductNodeName.76" type="ascii">B_ancillary_degraded_B6</MDATTR>
+                    <MDATTR name="ProductNodeName.77" type="ascii">B_msi_lost_B6</MDATTR>
+                    <MDATTR name="ProductNodeName.78" type="ascii">B_msi_degraded_B6</MDATTR>
+                    <MDATTR name="ProductNodeName.79" type="ascii">B_defective_B6</MDATTR>
+                    <MDATTR name="ProductNodeName.80" type="ascii">B_nodata_B6</MDATTR>
+                    <MDATTR name="ProductNodeName.81" type="ascii">B_partially_corrected_crosstalk_B6</MDATTR>
+                    <MDATTR name="ProductNodeName.82" type="ascii">B_saturated_l1a_B6</MDATTR>
+                    <MDATTR name="ProductNodeName.83" type="ascii">B_ancillary_lost_B7</MDATTR>
+                    <MDATTR name="ProductNodeName.84" type="ascii">B_ancillary_degraded_B7</MDATTR>
+                    <MDATTR name="ProductNodeName.85" type="ascii">B_msi_lost_B7</MDATTR>
+                    <MDATTR name="ProductNodeName.86" type="ascii">B_msi_degraded_B7</MDATTR>
+                    <MDATTR name="ProductNodeName.87" type="ascii">B_defective_B7</MDATTR>
+                    <MDATTR name="ProductNodeName.88" type="ascii">B_nodata_B7</MDATTR>
+                    <MDATTR name="ProductNodeName.89" type="ascii">B_partially_corrected_crosstalk_B7</MDATTR>
+                    <MDATTR name="ProductNodeName.90" type="ascii">B_saturated_l1a_B7</MDATTR>
+                    <MDATTR name="ProductNodeName.91" type="ascii">B_ancillary_lost_B8</MDATTR>
+                    <MDATTR name="ProductNodeName.92" type="ascii">B_ancillary_degraded_B8</MDATTR>
+                    <MDATTR name="ProductNodeName.93" type="ascii">B_msi_lost_B8</MDATTR>
+                    <MDATTR name="ProductNodeName.94" type="ascii">B_msi_degraded_B8</MDATTR>
+                    <MDATTR name="ProductNodeName.95" type="ascii">B_defective_B8</MDATTR>
+                    <MDATTR name="ProductNodeName.96" type="ascii">B_nodata_B8</MDATTR>
+                    <MDATTR name="ProductNodeName.97" type="ascii">B_partially_corrected_crosstalk_B8</MDATTR>
+                    <MDATTR name="ProductNodeName.98" type="ascii">B_saturated_l1a_B8</MDATTR>
+                    <MDATTR name="ProductNodeName.99" type="ascii">B_ancillary_lost_B8A</MDATTR>
+                    <MDATTR name="ProductNodeName.100" type="ascii">B_ancillary_degraded_B8A</MDATTR>
+                    <MDATTR name="ProductNodeName.101" type="ascii">B_msi_lost_B8A</MDATTR>
+                    <MDATTR name="ProductNodeName.102" type="ascii">B_msi_degraded_B8A</MDATTR>
+                    <MDATTR name="ProductNodeName.103" type="ascii">B_defective_B8A</MDATTR>
+                    <MDATTR name="ProductNodeName.104" type="ascii">B_nodata_B8A</MDATTR>
+                    <MDATTR name="ProductNodeName.105" type="ascii">B_partially_corrected_crosstalk_B8A</MDATTR>
+                    <MDATTR name="ProductNodeName.106" type="ascii">B_saturated_l1a_B8A</MDATTR>
+                    <MDATTR name="ProductNodeName.107" type="ascii">B_ancillary_lost_B9</MDATTR>
+                    <MDATTR name="ProductNodeName.108" type="ascii">B_ancillary_degraded_B9</MDATTR>
+                    <MDATTR name="ProductNodeName.109" type="ascii">B_msi_lost_B9</MDATTR>
+                    <MDATTR name="ProductNodeName.110" type="ascii">B_msi_degraded_B9</MDATTR>
+                    <MDATTR name="ProductNodeName.111" type="ascii">B_defective_B9</MDATTR>
+                    <MDATTR name="ProductNodeName.112" type="ascii">B_nodata_B9</MDATTR>
+                    <MDATTR name="ProductNodeName.113" type="ascii">B_partially_corrected_crosstalk_B9</MDATTR>
+                    <MDATTR name="ProductNodeName.114" type="ascii">B_saturated_l1a_B9</MDATTR>
+                    <MDATTR name="ProductNodeName.115" type="ascii">B_ancillary_lost_B10</MDATTR>
+                    <MDATTR name="ProductNodeName.116" type="ascii">B_ancillary_degraded_B10</MDATTR>
+                    <MDATTR name="ProductNodeName.117" type="ascii">B_msi_lost_B10</MDATTR>
+                    <MDATTR name="ProductNodeName.118" type="ascii">B_msi_degraded_B10</MDATTR>
+                    <MDATTR name="ProductNodeName.119" type="ascii">B_defective_B10</MDATTR>
+                    <MDATTR name="ProductNodeName.120" type="ascii">B_nodata_B10</MDATTR>
+                    <MDATTR name="ProductNodeName.121" type="ascii">B_partially_corrected_crosstalk_B10</MDATTR>
+                    <MDATTR name="ProductNodeName.122" type="ascii">B_saturated_l1a_B10</MDATTR>
+                    <MDATTR name="ProductNodeName.123" type="ascii">B_ancillary_lost_B11</MDATTR>
+                    <MDATTR name="ProductNodeName.124" type="ascii">B_ancillary_degraded_B11</MDATTR>
+                    <MDATTR name="ProductNodeName.125" type="ascii">B_msi_lost_B11</MDATTR>
+                    <MDATTR name="ProductNodeName.126" type="ascii">B_msi_degraded_B11</MDATTR>
+                    <MDATTR name="ProductNodeName.127" type="ascii">B_defective_B11</MDATTR>
+                    <MDATTR name="ProductNodeName.128" type="ascii">B_nodata_B11</MDATTR>
+                    <MDATTR name="ProductNodeName.129" type="ascii">B_partially_corrected_crosstalk_B11</MDATTR>
+                    <MDATTR name="ProductNodeName.130" type="ascii">B_saturated_l1a_B11</MDATTR>
+                    <MDATTR name="ProductNodeName.131" type="ascii">B_ancillary_lost_B12</MDATTR>
+                    <MDATTR name="ProductNodeName.132" type="ascii">B_ancillary_degraded_B12</MDATTR>
+                    <MDATTR name="ProductNodeName.133" type="ascii">B_msi_lost_B12</MDATTR>
+                    <MDATTR name="ProductNodeName.134" type="ascii">B_msi_degraded_B12</MDATTR>
+                    <MDATTR name="ProductNodeName.135" type="ascii">B_defective_B12</MDATTR>
+                    <MDATTR name="ProductNodeName.136" type="ascii">B_nodata_B12</MDATTR>
+                    <MDATTR name="ProductNodeName.137" type="ascii">B_partially_corrected_crosstalk_B12</MDATTR>
+                    <MDATTR name="ProductNodeName.138" type="ascii">B_saturated_l1a_B12</MDATTR>
+                    <MDATTR name="ProductNodeName.139" type="ascii">B_opaque_clouds</MDATTR>
+                    <MDATTR name="ProductNodeName.140" type="ascii">B_cirrus_clouds</MDATTR>
+                    <MDATTR name="ProductNodeName.141" type="ascii">B_snow_and_ice_areas</MDATTR>
+                    <MDATTR name="ProductNodeName.142" type="ascii">view_zenith_mean</MDATTR>
+                    <MDATTR name="ProductNodeName.143" type="ascii">view_azimuth_mean</MDATTR>
+                    <MDATTR name="ProductNodeName.144" type="ascii">sun_zenith</MDATTR>
+                    <MDATTR name="ProductNodeName.145" type="ascii">sun_azimuth</MDATTR>
+                    <MDATTR name="ProductNodeName.146" type="ascii">view_zenith_B1</MDATTR>
+                    <MDATTR name="ProductNodeName.147" type="ascii">view_azimuth_B1</MDATTR>
+                    <MDATTR name="ProductNodeName.148" type="ascii">view_zenith_B2</MDATTR>
+                    <MDATTR name="ProductNodeName.149" type="ascii">view_azimuth_B2</MDATTR>
+                    <MDATTR name="ProductNodeName.150" type="ascii">view_zenith_B3</MDATTR>
+                    <MDATTR name="ProductNodeName.151" type="ascii">view_azimuth_B3</MDATTR>
+                    <MDATTR name="ProductNodeName.152" type="ascii">view_zenith_B4</MDATTR>
+                    <MDATTR name="ProductNodeName.153" type="ascii">view_azimuth_B4</MDATTR>
+                    <MDATTR name="ProductNodeName.154" type="ascii">view_zenith_B5</MDATTR>
+                    <MDATTR name="ProductNodeName.155" type="ascii">view_azimuth_B5</MDATTR>
+                    <MDATTR name="ProductNodeName.156" type="ascii">view_zenith_B6</MDATTR>
+                    <MDATTR name="ProductNodeName.157" type="ascii">view_azimuth_B6</MDATTR>
+                    <MDATTR name="ProductNodeName.158" type="ascii">view_zenith_B7</MDATTR>
+                    <MDATTR name="ProductNodeName.159" type="ascii">view_azimuth_B7</MDATTR>
+                    <MDATTR name="ProductNodeName.160" type="ascii">view_zenith_B8</MDATTR>
+                    <MDATTR name="ProductNodeName.161" type="ascii">view_azimuth_B8</MDATTR>
+                    <MDATTR name="ProductNodeName.162" type="ascii">view_zenith_B8A</MDATTR>
+                    <MDATTR name="ProductNodeName.163" type="ascii">view_azimuth_B8A</MDATTR>
+                    <MDATTR name="ProductNodeName.164" type="ascii">view_zenith_B9</MDATTR>
+                    <MDATTR name="ProductNodeName.165" type="ascii">view_azimuth_B9</MDATTR>
+                    <MDATTR name="ProductNodeName.166" type="ascii">view_zenith_B10</MDATTR>
+                    <MDATTR name="ProductNodeName.167" type="ascii">view_azimuth_B10</MDATTR>
+                    <MDATTR name="ProductNodeName.168" type="ascii">view_zenith_B11</MDATTR>
+                    <MDATTR name="ProductNodeName.169" type="ascii">view_azimuth_B11</MDATTR>
+                    <MDATTR name="ProductNodeName.170" type="ascii">view_zenith_B12</MDATTR>
+                    <MDATTR name="ProductNodeName.171" type="ascii">view_azimuth_B12</MDATTR>
+                </MDElem>
+            </MDElem>
+            <MDElem name="Processing_Graph">
+                <MDElem name="node.0">
+                    <MDATTR name="id" type="ascii" mode="rw">Subset</MDATTR>
+                    <MDATTR name="operator" type="ascii" mode="rw">Subset</MDATTR>
+                    <MDATTR name="moduleName" type="ascii" mode="rw">SNAP Graph Processing Framework (GPF)</MDATTR>
+                    <MDATTR name="moduleVersion" type="ascii" mode="rw">11.0.1</MDATTR>
+                    <MDATTR name="purpose" type="ascii" mode="rw">Create a spatial and/or spectral subset of a data product.</MDATTR>
+                    <MDATTR name="authors" type="ascii" mode="rw">SNAP Developers</MDATTR>
+                    <MDATTR name="version" type="ascii" mode="rw">1.3</MDATTR>
+                    <MDATTR name="copyright" type="ascii" mode="rw">(c) 2011 by Brockmann Consult</MDATTR>
+                    <MDATTR name="processingTime" type="ascii" mode="rw">2025-02-18T04:57:10.691Z</MDATTR>
+                    <MDElem name="sources">
+                        <MDATTR name="sourceProduct" type="ascii" mode="rw">Resample</MDATTR>
+                    </MDElem>
+                    <MDElem name="parameters">
+                        <MDATTR name="fullSwath" type="ascii">false</MDATTR>
+                        <MDATTR name="subSamplingY" type="ascii">1</MDATTR>
+                        <MDATTR name="subSamplingX" type="ascii">1</MDATTR>
+                        <MDATTR name="copyMetadata" type="ascii">false</MDATTR>
+                        <MDATTR name="region" type="ascii">4453,1149,1595,1568</MDATTR>
+                        <MDElem name="geoRegion">
+                            <MDATTR name="class" type="ascii">org.locationtech.jts.geom.Polygon</MDATTR>
+                        </MDElem>
+                    </MDElem>
+                </MDElem>
+                <MDElem name="node.1">
+                    <MDATTR name="id" type="ascii" mode="rw">Resample</MDATTR>
+                    <MDATTR name="operator" type="ascii" mode="rw">Resample</MDATTR>
+                    <MDATTR name="moduleName" type="ascii" mode="rw">SNAP Graph Processing Framework (GPF)</MDATTR>
+                    <MDATTR name="moduleVersion" type="ascii" mode="rw">11.0.1</MDATTR>
+                    <MDATTR name="purpose" type="ascii" mode="rw">Resampling of a multi-size source product to a single-size target product.</MDATTR>
+                    <MDATTR name="authors" type="ascii" mode="rw">Tonio Fincke</MDATTR>
+                    <MDATTR name="version" type="ascii" mode="rw">2.0</MDATTR>
+                    <MDATTR name="copyright" type="ascii" mode="rw">(c) 2016 by Brockmann Consult</MDATTR>
+                    <MDATTR name="processingTime" type="ascii" mode="rw">2025-02-18T04:57:10.693Z</MDATTR>
+                    <MDElem name="sources">
+                        <MDATTR name="sourceProduct" type="ascii" mode="rw">file:/S:/GitHub/Copernicus/FreshWaterQuality/Data/S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707.SAFE.zip</MDATTR>
+                    </MDElem>
+                    <MDElem name="parameters">
+                        <MDATTR name="upsampling" type="ascii">Nearest</MDATTR>
+                        <MDATTR name="flagDownsampling" type="ascii">First</MDATTR>
+                        <MDATTR name="resampleOnPyramidLevels" type="ascii">true</MDATTR>
+                        <MDATTR name="downsampling" type="ascii">First</MDATTR>
+                        <MDATTR name="referenceBand" type="ascii">B2</MDATTR>
+                    </MDElem>
+                </MDElem>
+                <MDElem name="node.2">
+                    <MDATTR name="id" type="ascii" mode="rw">Write</MDATTR>
+                    <MDATTR name="operator" type="ascii" mode="rw">Write</MDATTR>
+                    <MDATTR name="moduleName" type="ascii" mode="rw">SNAP Graph Processing Framework (GPF)</MDATTR>
+                    <MDATTR name="moduleVersion" type="ascii" mode="rw">11.0.1</MDATTR>
+                    <MDATTR name="purpose" type="ascii" mode="rw">Writes a data product to a file.</MDATTR>
+                    <MDATTR name="authors" type="ascii" mode="rw">Marco Zuehlke, Norman Fomferra</MDATTR>
+                    <MDATTR name="version" type="ascii" mode="rw">1.3</MDATTR>
+                    <MDATTR name="copyright" type="ascii" mode="rw">(c) 2010 by Brockmann Consult</MDATTR>
+                    <MDATTR name="processingTime" type="ascii" mode="rw">2025-02-18T04:57:10.695Z</MDATTR>
+                    <MDElem name="sources">
+                        <MDATTR name="sourceProduct" type="ascii" mode="rw">product:Subset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled</MDATTR>
+                    </MDElem>
+                    <MDElem name="parameters">
+                        <MDATTR name="writeEntireTileRows" type="ascii">false</MDATTR>
+                        <MDATTR name="file" type="ascii">S:\GitHub\Copernicus\FreshWaterQuality\Processing\Output\Subset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled.dim</MDATTR>
+                        <MDATTR name="deleteOutputOnFailure" type="ascii">true</MDATTR>
+                        <MDATTR name="formatName" type="ascii">BEAM-DIMAP</MDATTR>
+                        <MDATTR name="clearCacheAfterRowWrite" type="ascii">false</MDATTR>
+                    </MDElem>
+                </MDElem>
+                <MDElem name="node.3">
+                    <MDATTR name="id" type="ascii" mode="rw">c2rcc.msi$1953234A933</MDATTR>
+                    <MDATTR name="operator" type="ascii" mode="rw">c2rcc.msi</MDATTR>
+                    <MDATTR name="moduleName" type="ascii" mode="rw">Case 2 Regional / CoastColour Processor Operator</MDATTR>
+                    <MDATTR name="moduleVersion" type="ascii" mode="rw">11.0.1</MDATTR>
+                    <MDATTR name="purpose" type="ascii" mode="rw">Performs atmospheric correction and IOP retrieval with uncertainties on Sentinel-2 MSI L1C data products.</MDATTR>
+                    <MDATTR name="authors" type="ascii" mode="rw">Roland Doerffer, Marco Peters, Sabine Embacher (Brockmann Consult)</MDATTR>
+                    <MDATTR name="version" type="ascii" mode="rw">1.2</MDATTR>
+                    <MDATTR name="copyright" type="ascii" mode="rw">Copyright (C) 2016 by Brockmann Consult</MDATTR>
+                    <MDATTR name="processingTime" type="ascii" mode="rw">2025-02-23T09:47:47.010Z</MDATTR>
+                    <MDElem name="sources">
+                        <MDATTR name="sourceProduct" type="ascii" mode="rw">file:/S:/GitHub/Copernicus/FreshWaterQuality/Processing/Output/Subset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled.dim</MDATTR>
+                    </MDElem>
+                    <MDElem name="parameters">
+                        <MDATTR name="thresholdCloudTDown865" type="ascii">0.955</MDATTR>
+                        <MDATTR name="outputUncertainties" type="ascii">true</MDATTR>
+                        <MDATTR name="thresholdAcReflecOos" type="ascii">0.1</MDATTR>
+                        <MDATTR name="ozone" type="ascii">289.1</MDATTR>
+                        <MDATTR name="CHLfac" type="ascii">21.0</MDATTR>
+                        <MDATTR name="validPixelExpression" type="ascii">B8 &gt; 0 &amp;&amp; B8 &lt; 0.1</MDATTR>
+                        <MDATTR name="outputRtosaGcAann" type="ascii">false</MDATTR>
+                        <MDATTR name="outputRhown" type="ascii">true</MDATTR>
+                        <MDATTR name="thresholdRtosaOOS" type="ascii">0.05</MDATTR>
+                        <MDATTR name="outputAsRrs" type="ascii">false</MDATTR>
+                        <MDATTR name="outputKd" type="ascii">true</MDATTR>
+                        <MDATTR name="TSMfac" type="ascii">1.06</MDATTR>
+                        <MDATTR name="temperature" type="ascii">10.0</MDATTR>
+                        <MDATTR name="deriveRwFromPathAndTransmittance" type="ascii">false</MDATTR>
+                        <MDATTR name="CHLexp" type="ascii">1.04</MDATTR>
+                        <MDATTR name="press" type="ascii">1024.182</MDATTR>
+                        <MDATTR name="elevation" type="ascii">257.0</MDATTR>
+                        <MDATTR name="outputTup" type="ascii">false</MDATTR>
+                        <MDATTR name="salinity" type="ascii">1.0E-4</MDATTR>
+                        <MDATTR name="outputAcReflectance" type="ascii">false</MDATTR>
+                        <MDATTR name="TSMexp" type="ascii">0.942</MDATTR>
+                        <MDATTR name="outputRtosaGc" type="ascii">false</MDATTR>
+                        <MDATTR name="outputRtoa" type="ascii">false</MDATTR>
+                        <MDATTR name="useEcmwfAuxData" type="ascii">false</MDATTR>
+                        <MDATTR name="outputTdown" type="ascii">false</MDATTR>
+                        <MDATTR name="outputRpath" type="ascii">false</MDATTR>
+                        <MDATTR name="netSet" type="ascii">C2RCC-Nets</MDATTR>
+                        <MDATTR name="outputOos" type="ascii">false</MDATTR>
+                    </MDElem>
+                    <MDElem name="neuronalNets">
+                        <MDATTR name="usedNeuralNet" type="ascii">/auxdata/nets/msi/std_s2_20160502/rtosa_aann/31x7x31_78.0.net</MDATTR>
+                        <MDATTR name="usedNeuralNet" type="ascii">/auxdata/nets/msi/std_s2_20160502/rtosa_rw/33x73x53x33_291140.4.net</MDATTR>
+                        <MDATTR name="usedNeuralNet" type="ascii">/auxdata/nets/msi/std_s2_20160502/rw_iop/97x77x37_17515.9.net</MDATTR>
+                        <MDATTR name="usedNeuralNet" type="ascii">/auxdata/nets/msi/std_s2_20160502/iop_rw/17x97x47_125.5.net</MDATTR>
+                        <MDATTR name="usedNeuralNet" type="ascii">/auxdata/nets/msi/std_s2_20160502/rw_kd/97x77x7_306.8.net</MDATTR>
+                        <MDATTR name="usedNeuralNet" type="ascii">/auxdata/nets/msi/std_s2_20160502/iop_unciop/17x77x37_11486.7.net</MDATTR>
+                        <MDATTR name="usedNeuralNet" type="ascii">/auxdata/nets/msi/std_s2_20160502/iop_uncsumiop_unckd/17x77x37_9113.1.net</MDATTR>
+                        <MDATTR name="usedNeuralNet" type="ascii">/auxdata/nets/msi/std_s2_20160502/rw_rwnorm/27x7x27_28.0.net</MDATTR>
+                        <MDATTR name="usedNeuralNet" type="ascii">/auxdata/nets/msi/std_s2_20160502/rtosa_trans/31x77x57x37_37537.6.net</MDATTR>
+                        <MDATTR name="usedNeuralNet" type="ascii">/auxdata/nets/msi/std_s2_20160502/rtosa_rpath/31x77x57x37_1564.4.net</MDATTR>
+                    </MDElem>
+                </MDElem>
+                <MDElem name="node.4">
+                    <MDATTR name="id" type="ascii" mode="rw">Write$19532355E54</MDATTR>
+                    <MDATTR name="operator" type="ascii" mode="rw">Write</MDATTR>
+                    <MDATTR name="moduleName" type="ascii" mode="rw">SNAP Graph Processing Framework (GPF)</MDATTR>
+                    <MDATTR name="moduleVersion" type="ascii" mode="rw">11.0.1</MDATTR>
+                    <MDATTR name="purpose" type="ascii" mode="rw">Writes a data product to a file.</MDATTR>
+                    <MDATTR name="authors" type="ascii" mode="rw">Marco Zuehlke, Norman Fomferra</MDATTR>
+                    <MDATTR name="version" type="ascii" mode="rw">1.3</MDATTR>
+                    <MDATTR name="copyright" type="ascii" mode="rw">(c) 2010 by Brockmann Consult</MDATTR>
+                    <MDATTR name="processingTime" type="ascii" mode="rw">2025-02-23T09:48:33.240Z</MDATTR>
+                    <MDElem name="sources">
+                        <MDATTR name="sourceProduct" type="ascii" mode="rw">c2rcc.msi$1953234A933</MDATTR>
+                    </MDElem>
+                    <MDElem name="parameters">
+                        <MDATTR name="writeEntireTileRows" type="ascii">true</MDATTR>
+                        <MDATTR name="file" type="ascii">.\script_outSubset_S2A_MSIL1C_20181115T101251_N0500_R022_T32TQN_20230617T170707_resampled_C2RCC.dim</MDATTR>
+                        <MDATTR name="deleteOutputOnFailure" type="ascii">true</MDATTR>
+                        <MDATTR name="formatName" type="ascii">BEAM-DIMAP</MDATTR>
+                        <MDATTR name="clearCacheAfterRowWrite" type="ascii">false</MDATTR>
+                    </MDElem>
+                </MDElem>
+            </MDElem>
+        </MDElem>
+    </Dataset_Sources>
+</Dimap_Document>
